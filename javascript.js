@@ -34,8 +34,6 @@ function calculate() {
 
       
         lastAnswer = eval(expression);
-
-    
         let displayExpression = display.value
             .replace(/Math.sqrt\(/g, "√(")      
             .replace(/Math.cbrt\(/g, "∛(")     
