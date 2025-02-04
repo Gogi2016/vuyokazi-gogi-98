@@ -14,9 +14,17 @@ function deleteLast() {
 
 function calculate() {
     try {
-        display.value = eval(display.value);
+        // Replace function-like inputs with actual JavaScript functions
+        let expression = display.value
+            .replace(/Math.sqrt\(/g, "Math.sqrt(")
+            .replace(/Math.pow\(/g, "Math.pow(")
+            .replace(/Math.sin\(/g, "Math.sin(")
+            .replace(/Math.cos\(/g, "Math.cos(")
+            .replace(/Math.tan\(/g, "Math.tan(")
+            .replace(/Math.log\(/g, "Math.log(");
+
+        display.value = eval(expression);
     } catch (error) {
-        alert("Invalid Expression");
-        clearDisplay();
+        display.value = "Error";
     }
 }
