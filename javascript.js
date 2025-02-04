@@ -1,6 +1,6 @@
 let display = document.getElementById("display");
-let resultDisplayed = false; 
-let lastAnswer = null; 
+let resultDisplayed = false;
+let lastAnswer = null;
 
 function appendToDisplay(value) {
     // If the result was already displayed, clear the display first
@@ -13,12 +13,12 @@ function appendToDisplay(value) {
 
 function clearDisplay() {
     display.value = "";
-    resultDisplayed = false; 
+    resultDisplayed = false;
 }
 
 function deleteLast() {
-    display.value = display.value.slice(0, -1);
-    resultDisplayed = false; 
+    display.value = display.value.slice(0, -1); // Remove the last character
+    resultDisplayed = false;
 }
 
 function calculate() {
@@ -33,11 +33,14 @@ function calculate() {
             .replace(/log\(/g, "Math.log("); 
 
         lastAnswer = eval(expression); 
-        display.value = lastAnswer; 
-        resultDisplayed = true; 
+
+        
+        display.value = expression + "\n= " + lastAnswer; 
+
+        resultDisplayed = true;
     } catch (error) {
         display.value = "Error"; 
-        resultDisplayed = false; 
+        resultDisplayed = false;
     }
 }
 
