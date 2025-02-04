@@ -32,10 +32,21 @@ function calculate() {
             .replace(/tan\(/g, "Math.tan(")  
             .replace(/log\(/g, "Math.log("); 
 
-        lastAnswer = eval(expression); 
+      
+        lastAnswer = eval(expression);
+
+    
+        let displayExpression = display.value
+            .replace(/Math.sqrt\(/g, "√(")      
+            .replace(/Math.cbrt\(/g, "∛(")     
+            .replace(/\*\*/g, "^")           
+            .replace(/Math.sin\(/g, "sin(")   
+            .replace(/Math.cos\(/g, "cos(")
+            .replace(/Math.tan\(/g, "tan(")  
+            .replace(/Math.log\(/g, "log("); 
 
         
-        display.value = expression + "\n= " + lastAnswer; 
+        display.value = displayExpression + "\n= " + lastAnswer;
 
         resultDisplayed = true;
     } catch (error) {
@@ -43,6 +54,7 @@ function calculate() {
         resultDisplayed = false;
     }
 }
+
 
 // Function to append the last answer when the "ANS" button is clicked
 function appendLastAnswer() {
