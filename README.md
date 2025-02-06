@@ -1,4 +1,4 @@
-# vuyokazi-gogi--98-
+# vuyokazi-gogi--98
 
 # Scientific Calculator App
 
