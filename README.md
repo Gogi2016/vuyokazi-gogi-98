@@ -1,4 +1,4 @@
-# vuyokazi-gogi--98
+# vuyokazi-gogi-98
 
 # Scientific Calculator App
 
@@ -48,11 +48,11 @@ To clone and run this project locally, follow these steps:
 1. **Clone the repository**:
     - Open your terminal or command prompt.
     - Run the following command to clone the repository:
-      git clone https://github.com/Gogi2016/vuyokazi-gogi--98-.git
+      git clone https://github.com/Gogi2016/vuyokazi-gogi-98
 
 2. **Navigate to the project folder**:
     
-    cd vuyokazi-gogi--98-
+    cd vuyokazi-gogi-98
 
 3. **Open the project in your browser**:
     - Open the `index.html` file in your preferred browser. Simply double-click the `index.html` file, or right-click and select "Open with" and choose your browser.
